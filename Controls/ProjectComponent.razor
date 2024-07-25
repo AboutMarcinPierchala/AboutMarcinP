@@ -1,0 +1,18 @@
+﻿@if(project is not null)
+{
+    <div class="card my-2">
+        <div class="card-body">
+            <h5 class="card-title">@project.Title</h5>
+            <p class="card-text">@project.Description</p>
+            <img src=@($"/Images/{project.Title}.png") class="card-img-top" alt="..." style="width:80%"/>
+            <br />
+            <br />
+            <a href="@project.Link" class="btn btn-primary">View Project</a>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Project? project { get; set; }
+}

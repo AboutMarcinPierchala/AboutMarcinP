@@ -1,0 +1,12 @@
+﻿@if(Projects is not null && Projects.Count > 0)
+{
+    @foreach (var project in Projects)
+    {
+        <ProjectComponent project="project"></ProjectComponent>
+    }
+}
+
+@code {
+    [Parameter]
+    public List<Project>? Projects { get; set; }
+}

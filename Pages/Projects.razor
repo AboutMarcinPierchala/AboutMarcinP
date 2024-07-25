@@ -1,0 +1,9 @@
+﻿@page "/projects"
+
+<h2>My Projects</h2>
+
+<ProjectsListComponent Projects="projects"></ProjectsListComponent>
+
+@code {
+    private List<Project> projects = ProjectsRepository.GetAllProjects();
+}
